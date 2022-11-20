@@ -1,0 +1,31 @@
+# Project: i_rand
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = i_rand.o $(RES)
+LINKOBJ  = i_rand.o $(RES)
+LIBS =  -L"F:/Compilers/Dev-Cpp/lib"  
+INCS =  -I"F:/Compilers/Dev-Cpp/include" 
+CXXINCS =  -I"F:/Compilers/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"F:/Compilers/Dev-Cpp/include/c++/3.4.2/backward"  -I"F:/Compilers/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"F:/Compilers/Dev-Cpp/include/c++/3.4.2"  -I"F:/Compilers/Dev-Cpp/include" 
+BIN  = i_rand.a
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before i_rand.a all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	ar r $(BIN) $(LINKOBJ)
+	ranlib $(BIN)
+
+i_rand.o: i_rand.c
+	$(CC) -c i_rand.c -o i_rand.o $(CFLAGS)

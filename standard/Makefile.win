@@ -1,0 +1,117 @@
+# Project: DSNLab
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = ../unit.o ../alist.o ../aregion.o ../army.o ../astring.o ../battle.o ../faction.o ../fileio.o ../game.o ../gamedefs.o ../gameio.o ../items.o ../main.o ../market.o ../monthorders.o ../npc.o ../object.o ../orders.o ../parseorders.o ../production.o ../runorders.o ../shields.o ../skills.o ../template.o extra.o rules.o skillshows.o specials.o spells.o world.o $(RES)
+LINKOBJ  = ../unit.o ../alist.o ../aregion.o ../army.o ../astring.o ../battle.o ../faction.o ../fileio.o ../game.o ../gamedefs.o ../gameio.o ../items.o ../main.o ../market.o ../monthorders.o ../npc.o ../object.o ../orders.o ../parseorders.o ../production.o ../runorders.o ../shields.o ../skills.o ../template.o extra.o rules.o skillshows.o specials.o spells.o world.o $(RES)
+LIBS =  -L"F:/Compilers/Dev-Cpp/lib" ../i_rand.a  
+INCS =  -I"F:/Compilers/Dev-Cpp/include"  -I"F:/Atlantis/Engine/Sources/DSNLab-last"  -I"F:/Atlantis/Engine/Sources/DSNLab-last/standard" 
+CXXINCS =  -I"F:/Compilers/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"F:/Compilers/Dev-Cpp/include/c++/3.4.2/backward"  -I"F:/Compilers/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"F:/Compilers/Dev-Cpp/include/c++/3.4.2"  -I"F:/Compilers/Dev-Cpp/include"  -I"F:/Atlantis/Engine/Sources/DSNLab-last"  -I"F:/Atlantis/Engine/Sources/DSNLab-last/standard" 
+BIN  = dsn.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before dsn.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "dsn.exe" $(LIBS)
+
+../unit.o: ../unit.cpp
+	$(CPP) -c ../unit.cpp -o ../unit.o $(CXXFLAGS)
+
+../alist.o: ../alist.cpp
+	$(CPP) -c ../alist.cpp -o ../alist.o $(CXXFLAGS)
+
+../aregion.o: ../aregion.cpp
+	$(CPP) -c ../aregion.cpp -o ../aregion.o $(CXXFLAGS)
+
+../army.o: ../army.cpp
+	$(CPP) -c ../army.cpp -o ../army.o $(CXXFLAGS)
+
+../astring.o: ../astring.cpp
+	$(CPP) -c ../astring.cpp -o ../astring.o $(CXXFLAGS)
+
+../battle.o: ../battle.cpp
+	$(CPP) -c ../battle.cpp -o ../battle.o $(CXXFLAGS)
+
+../faction.o: ../faction.cpp
+	$(CPP) -c ../faction.cpp -o ../faction.o $(CXXFLAGS)
+
+../fileio.o: ../fileio.cpp
+	$(CPP) -c ../fileio.cpp -o ../fileio.o $(CXXFLAGS)
+
+../game.o: ../game.cpp
+	$(CPP) -c ../game.cpp -o ../game.o $(CXXFLAGS)
+
+../gamedefs.o: ../gamedefs.cpp
+	$(CPP) -c ../gamedefs.cpp -o ../gamedefs.o $(CXXFLAGS)
+
+../gameio.o: ../gameio.cpp
+	$(CPP) -c ../gameio.cpp -o ../gameio.o $(CXXFLAGS)
+
+../items.o: ../items.cpp
+	$(CPP) -c ../items.cpp -o ../items.o $(CXXFLAGS)
+
+../main.o: ../main.cpp
+	$(CPP) -c ../main.cpp -o ../main.o $(CXXFLAGS)
+
+../market.o: ../market.cpp
+	$(CPP) -c ../market.cpp -o ../market.o $(CXXFLAGS)
+
+../monthorders.o: ../monthorders.cpp
+	$(CPP) -c ../monthorders.cpp -o ../monthorders.o $(CXXFLAGS)
+
+../npc.o: ../npc.cpp
+	$(CPP) -c ../npc.cpp -o ../npc.o $(CXXFLAGS)
+
+../object.o: ../object.cpp
+	$(CPP) -c ../object.cpp -o ../object.o $(CXXFLAGS)
+
+../orders.o: ../orders.cpp
+	$(CPP) -c ../orders.cpp -o ../orders.o $(CXXFLAGS)
+
+../parseorders.o: ../parseorders.cpp
+	$(CPP) -c ../parseorders.cpp -o ../parseorders.o $(CXXFLAGS)
+
+../production.o: ../production.cpp
+	$(CPP) -c ../production.cpp -o ../production.o $(CXXFLAGS)
+
+../runorders.o: ../runorders.cpp
+	$(CPP) -c ../runorders.cpp -o ../runorders.o $(CXXFLAGS)
+
+../shields.o: ../shields.cpp
+	$(CPP) -c ../shields.cpp -o ../shields.o $(CXXFLAGS)
+
+../skills.o: ../skills.cpp
+	$(CPP) -c ../skills.cpp -o ../skills.o $(CXXFLAGS)
+
+../template.o: ../template.cpp
+	$(CPP) -c ../template.cpp -o ../template.o $(CXXFLAGS)
+
+extra.o: extra.cpp
+	$(CPP) -c extra.cpp -o extra.o $(CXXFLAGS)
+
+rules.o: rules.cpp
+	$(CPP) -c rules.cpp -o rules.o $(CXXFLAGS)
+
+skillshows.o: skillshows.cpp
+	$(CPP) -c skillshows.cpp -o skillshows.o $(CXXFLAGS)
+
+specials.o: specials.cpp
+	$(CPP) -c specials.cpp -o specials.o $(CXXFLAGS)
+
+spells.o: spells.cpp
+	$(CPP) -c spells.cpp -o spells.o $(CXXFLAGS)
+
+world.o: world.cpp
+	$(CPP) -c world.cpp -o world.o $(CXXFLAGS)
